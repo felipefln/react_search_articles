@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FormEvent } from "react";
+import React, { useState, FormEvent } from "react";
 import { Title, Header, Form, Repositories, Error, Loading } from "./styles";
 import { FiSearch, FiChevronRight } from "react-icons/fi";
 import { Link } from "react-router-dom";

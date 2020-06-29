@@ -12,7 +12,7 @@ interface Article {
 }
 
 const Favorites: React.FC = () => {
-    const [articles, setArticles] = useState<Article[] | null>(() => {
+    const [articles] = useState<Article[] | null>(() => {
         const storagedFavorites = localStorage.getItem(
             "@ReactSearchArticles:favorites"
         );

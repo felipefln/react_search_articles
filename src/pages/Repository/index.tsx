@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useRouteMatch, Link } from "react-router-dom";
 import { FiChevronLeft, FiChevronRight, FiHeart } from "react-icons/fi";
-import {
-    Header,
-    RepositoryInfo,
-    Article,
-    Loading,
-    ButtonDownload,
-} from "./styles";
+import { Header, Article, Loading, ButtonDownload } from "./styles";
 
 import search from "../../assets/search.png";
 import api from "../../services/api";
@@ -32,7 +26,7 @@ const Repository: React.FC = () => {
     const [article, setArticle] = useState<Article | null>(null);
     const { params } = useRouteMatch<Params>();
     let coreId = params.id;
-    const [favorite, setFavorite] = useState<Article[] | null>(() => {
+    const [favorite] = useState<Article[] | null>(() => {
         const storagedFavorite = localStorage.getItem(
             "@ReactSearchArticles:favorites"
         );
@@ -59,7 +53,7 @@ const Repository: React.FC = () => {
             setLoad(false);
             setArticle(response.data.data);
         });
-    }, []);
+    }, [coreId]);
 
     function download() {
         localStorage.setItem(
@@ -97,7 +91,9 @@ const Repository: React.FC = () => {
                         </a>
                     </div>
                     <ButtonDownload>
-                        <a download={article.downloadUrl}>Download do Artigo</a>
+                        <a href="#" download={article.downloadUrl}>
+                            Download do Artigo
+                        </a>
                     </ButtonDownload>
                 </Article>
             )}
