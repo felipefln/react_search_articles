@@ -7,6 +7,14 @@ interface FormProps {
 
 export const Header = styled.div`
     display: flex;
+    width: 1200px;
+
+    a {
+        color: black;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: bold;
+    }
 `;
 
 export const Title = styled.h1`
@@ -63,7 +71,7 @@ export const Repositories = styled.div`
     a {
         background: #fff;
         border-radius: 5px;
-        width: 100%;
+        width: 115%;
         padding: 24px;
         display: block;
         text-decoration: none;
@@ -105,6 +113,29 @@ export const Repositories = styled.div`
         svg {
             margin-left: auto;
             color: #cbcbd6;
+        }
+    }
+`;
+
+export const Loading = styled.span`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border: 2px solid transparent;
+    background: 0;
+    border-radius: 999px;
+    border-top-color: deepskyblue;
+    border-left-color: deepskyblue;
+    animation: spin 0.7s infinite linear;
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
         }
     }
 `;

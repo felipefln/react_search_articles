@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-    baseURL: "http://localhost:4000/api/search",
+    baseURL: "https://calm-tundra-76195.herokuapp.com/api/search",
 });
 
-export { api };
+export default api;
