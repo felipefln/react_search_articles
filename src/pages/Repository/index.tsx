@@ -91,7 +91,7 @@ const Repository: React.FC = () => {
                         </a>
                     </div>
                     <ButtonDownload>
-                        <a href="#" download={article.downloadUrl}>
+                        <a href="#top" download={article.downloadUrl}>
                             Download do Artigo
                         </a>
                     </ButtonDownload>
