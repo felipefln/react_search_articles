@@ -25,6 +25,11 @@ module.exports = {
     plugins: ["react", "react-hooks", "@typescript-eslint", "prettier"],
     rules: {
         "prettier/prettier": "error",
+        eslintConfig: {
+            rules: {
+                "no-unused-vars": "off",
+            },
+        },
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "react/jsx-filename-extension": [1, { extensions: [".tsx"] }],
@@ -38,6 +43,7 @@ module.exports = {
             },
         ],
     },
+
     settings: {
         "import/resolver": {
             typescript: {},

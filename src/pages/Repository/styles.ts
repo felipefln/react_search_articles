@@ -63,17 +63,16 @@ export const RepositoryInfo = styled.section`
 
         li {
             margin-right: 80px;
-            }
-            strong {
-                display: block;
-                font-size: 36px;
-                color: #3d3d4d;
-            }
-            span {
-                display: block;
-                margin-top: 4px;
-                color: #6c6c80;
-            }
+        }
+        strong {
+            display: block;
+            font-size: 36px;
+            color: #3d3d4d;
+        }
+        span {
+            display: block;
+            margin-top: 4px;
+            color: #6c6c80;
         }
     }
 `;

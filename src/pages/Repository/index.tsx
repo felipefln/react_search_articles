@@ -23,12 +23,15 @@ interface Article {
     publisher: string;
 }
 
+interface Params {
+    id: string;
+}
+
 const Repository: React.FC = () => {
     const [load, setLoad] = useState(true);
     const [article, setArticle] = useState<Article | null>(null);
-    const { params } = useRouteMatch();
-    const { id } = params.id;
-    let coreId = id;
+    const { params } = useRouteMatch<Params>();
+    let coreId = params.id;
     const [favorite, setFavorite] = useState<Article[] | null>(() => {
         const storagedFavorite = localStorage.getItem(
             "@ReactSearchArticles:favorites"
